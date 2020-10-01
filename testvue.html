@@ -1,0 +1,24 @@
+<Doctype HTML!>
+<div id="app">
+     <h3>SORTING NUMBER BY:
+       <button @click="sortLowest">Nilai Teringgi</button>
+       <button @click="sortHighest">Nilai Terendah</button>
+     </h3>
+        <table>
+          <thead>
+            <tr>
+              <th v-for="key in columns">
+                {{ key }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="entry in filteredFilms">
+              <td v-for="key in columns">
+                {{entry[key]}}
+              </td>
+            </tr>
+          </tbody>
+       </table>
+ </div>
+</html>
